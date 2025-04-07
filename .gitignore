@@ -1,0 +1,4 @@
+server/.env
+server/serviceAccountKey.json
+server/package-lock.json
+server/node_modules/

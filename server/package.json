@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "tic-tac-toe-server",
+  "version": "1.0.0",
+  "description": "Express backend for Tic Tac Toe game with Firebase integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.3",
+    "firebase-admin": "^11.10.1"
+  }
+}
