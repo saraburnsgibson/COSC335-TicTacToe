@@ -48,7 +48,7 @@ async function saveGame(board, winner) {
 
   const idToken = await user.getIdToken();
 
-  await fetch("http://localhost:5000/save-game", {
+  await fetch("http://localhost:3000/save-game", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
