@@ -1,0 +1,14 @@
+services:
+  backend:
+    image: node:18
+    container_name: tictactoe-backend
+    working_dir: /app
+    volumes:
+      - ./server:/app
+    ports:
+      - "5000:5000"
+    command: >
+      sh -c "npm install && node server.js"
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
