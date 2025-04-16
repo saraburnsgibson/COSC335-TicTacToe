@@ -12,7 +12,6 @@ dotenv.config();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 
-
 const serviceAccount = JSON.parse(
   fs.readFileSync(path.join(__dirname, "serviceAccountKey.json"))
 );
@@ -23,16 +22,9 @@ const db = admin.firestore();
 
 
 
-
-
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-
-
-const publicPath = path.join(__dirname, "./public");
-app.use(express.static(publicPath));
 
 
 app.post("/save-game", async (req, res) => {
@@ -59,12 +51,13 @@ app.post("/save-game", async (req, res) => {
 });
 
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(publicPath, "index.html"));
-});
 
+<<<<<<< HEAD
 
 const PORT = process.env.PORT || 3000;
+=======
+const PORT = process.env.VITE_BACKEND_PORT || 5000;
+>>>>>>> 4d172859d62e870e463a35f878fbb41451f13995
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
