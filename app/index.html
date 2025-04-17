@@ -69,15 +69,15 @@
           auth.onAuthStateChanged((user) => {
             const loginForm = document.getElementById("login-form");
             const userInfo = document.getElementById("user-info");
-            const appDiv = document.getElementById("app");
+            const rootDiv = document.getElementById("root");
 
             if (user) {
               displayUserInfo(user);
-              appDiv.style.display = "block";
+              rootDiv.style.display = "block";
               loginForm.style.display = "none";
               userInfo.style.display = "block";
             } else {
-              appDiv.style.display = "none";
+              rootDiv.style.display = "none";
               loginForm.style.display = "block";
               userInfo.style.display = "none";
             } 
@@ -115,8 +115,8 @@
       </div>
     </div>
 
-    <div id="app"></div>
+    <!-- This is where React will mount your game -->
+    <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-
   </body>
 </html>
